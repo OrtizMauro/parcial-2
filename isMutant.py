@@ -1,11 +1,18 @@
 def is_mutant(dna):
     
+    adn = [] # CREO UNA NUEVA LISTA PARA SEPARAR LOS CARACTERES.
+    
+    for i in dna:
+        for j in i:
+            adn.append(j) # AGREGO UNO POR UNO LOS CARACTERES.
+
+
     # Genero una matriz con la lista.
     mat = [[0 for _ in range(6)] for _ in range(6)]
     flag = 0
     for i in range(6):
         for j in range(6):
-            mat[i][j] = dna[flag]
+            mat[i][j] = adn[flag]
             flag += 1
     print("\nMATRIZ DE LA SECUENCIA:\n")
     
